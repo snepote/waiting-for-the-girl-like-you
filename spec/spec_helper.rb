@@ -1,18 +1,4 @@
 if ENV['RAILS_ENV'] == 'test'
-  if ENV['COVERALLS']
-    require 'coveralls'
-    Coveralls.wear!('rails')
-  end
-  if ENV['CODECLIMATE']
-    require "codeclimate-test-reporter"
-    CodeClimate::TestReporter.start
-  end
-  if ENV['CODECOV_IO']
-    require 'simplecov'
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
-    SimpleCov.start
-  end
   if ENV['CODACY']
     require 'codacy-coverage'
     Codacy::Reporter.start
@@ -39,10 +25,6 @@ require 'capybara/rspec'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  # Percy screenshot configuration
-  # See https://percy.io/docs/capybara
-  config.before(:suite) { Percy::Capybara.initialize_build }
-  config.after(:suite) { Percy::Capybara.finalize_build }
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
