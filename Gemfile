@@ -26,7 +26,6 @@ group :development, :test do
   gem 'rspec-rails',          '~> 3.4'
   gem 'sqlite3',              '~> 1.3'
   gem 'capybara',             '~> 2.7'
-  gem 'percy-capybara',       '2.0.1'
   gem 'selenium-webdriver',   '2.53.0'
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
