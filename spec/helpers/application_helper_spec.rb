@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'rails_helper'.freeze
 
 RSpec.describe ApplicationHelper do
   subject { Object.new.extend(ApplicationHelper) }
