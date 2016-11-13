@@ -27,6 +27,7 @@ group :development, :test do
   gem 'sqlite3',              '~> 1.3'
   gem 'capybara',             '~> 2.7'
   gem 'selenium-webdriver',   '2.53.0'
+  gem 'timecop',              '~> 0.8.1'
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
