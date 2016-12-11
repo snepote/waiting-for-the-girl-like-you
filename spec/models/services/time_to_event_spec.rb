@@ -1,24 +1,30 @@
 require 'rails_helper'
 
 RSpec.describe Services::TimeToEvent, :type => :model do
-  subject{described_class.new DateTime.parse('2017-09-02 00:00:00')} # 5 days
-  before do
-    Timecop.freeze(DateTime.parse('2016-12-04 00:00:00'))
-  end
+  let!(:timecop) { Timecop.freeze frozen_now }
+  let!(:subject) { described_class.new event_datetime }
 
   after do
     Timecop.return
   end
 
-  describe '#days' do
+  context '1 year 2 months and 6 days' do
+    let(:frozen_now) { DateTime.parse '2015-10-01 00:00:00' }
+    let(:event_datetime) { DateTime.parse '2016-12-06 00:00:00' }
+    it { expect(subject.years).to eq 1 }
+    it { expect(subject.months).to eq 2 }
+    it { expect(subject.days).to eq 6 }
+  end
+
+  context 'in a leap year' do
+    let(:frozen_now) { DateTime.parse '2016-02-28 00:00:00' }
+    let(:event_datetime) { DateTime.parse '2016-03-01 00:00:00' }
     it { expect(subject.days).to eq 2 }
   end
 
-  describe '#months' do
-    it { expect(subject.months).to eq 9 }
-  end
-
-  describe '#years' do
-    it { expect(subject.years).to eq 0 }
+  context 'in a regular year' do
+    let(:frozen_now) { DateTime.parse '2015-02-28 00:00:00' }
+    let(:event_datetime) { DateTime.parse '2015-03-01 00:00:00' }
+    it { expect(subject.days).to eq 1 }
   end
 end
