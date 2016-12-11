@@ -27,4 +27,11 @@ RSpec.describe Services::TimeToEvent, :type => :model do
     let(:event_datetime) { DateTime.parse '2015-03-01 00:00:00' }
     it { expect(subject.days).to eq 1 }
   end
+
+  context 'in an arbitrary date' do
+    let(:frozen_now)     { DateTime.parse '2016-12-01 00:00:00' }
+    let(:event_datetime) { DateTime.parse '2016-12-10 00:00:00' }
+    it { expect(subject.days).to eq 9 }
+    it { expect(subject.weeks).to eq 1 }
+  end
 end
