@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'rails_helper'.freeze
 
 RSpec.describe TimeToWedding, type: :model do
   before do
@@ -9,7 +9,7 @@ RSpec.describe TimeToWedding, type: :model do
     Timecop.return
   end
 
-  let(:subject) {described_class.new(event_datetime: event_datetime)}
+  let(:subject) { described_class.new(event_datetime: event_datetime) }
 
   describe '#get' do
     context '2017-09-02 00:00:00' do

@@ -1,6 +1,6 @@
-require 'rails_helper'
+require 'rails_helper'.freeze
 
-RSpec.describe Services::TimeToEvent, :type => :model do
+RSpec.describe Services::TimeToEvent, type: :model do
   let!(:timecop) { Timecop.freeze frozen_now }
   let!(:with_weeks) { FALSE }
   let!(:subject) { described_class.new event_datetime, with_weeks }
