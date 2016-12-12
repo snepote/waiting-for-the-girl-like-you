@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Services::TimeToEvent, :type => :model do
   let!(:timecop) { Timecop.freeze frozen_now }
-  let!(:subject) { described_class.new event_datetime }
+  let!(:with_weeks) { FALSE }
+  let!(:subject) { described_class.new event_datetime, with_weeks }
 
   after do
     Timecop.return
@@ -28,10 +29,18 @@ RSpec.describe Services::TimeToEvent, :type => :model do
     it { expect(subject.days).to eq 1 }
   end
 
-  context 'in an arbitrary date' do
+  describe 'weeks' do
     let(:frozen_now)     { DateTime.parse '2016-12-01 00:00:00' }
     let(:event_datetime) { DateTime.parse '2016-12-10 00:00:00' }
-    it { expect(subject.days).to eq 9 }
-    it { expect(subject.weeks).to eq 1 }
+    context 'with' do
+      let!(:with_weeks) { TRUE }
+      it { expect(subject.days).to eq 2 }
+      it { expect(subject.weeks).to eq 1 }
+    end
+
+    context 'without' do
+      let!(:with_weeks) { FALSE }
+      it { expect(subject.days).to eq 9 }
+    end
   end
 end
