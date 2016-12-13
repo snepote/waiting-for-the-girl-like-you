@@ -1,4 +1,5 @@
 module Services
+  # Calculates remaing time to an event in percentage
   class TimePercentage
     def initialize(remaining: r)
       @remaining = remaining
@@ -17,7 +18,8 @@ module Services
     end
 
     def to_s
-      "#{remaining.months} months #{remaining.weeks} weeks #{remaining.days} days"
+      "#{remaining.months} months #{remaining.weeks} weeks \
+#{remaining.days} days"
     end
 
     private

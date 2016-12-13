@@ -1,9 +1,9 @@
-# Calculates the time to an event and returns the value in years, months, weeks and days
 require 'time_diff'.freeze
 
 module Services
+  # Calculates the time to an event. Returns years, months, weeks and days
   class TimeToEvent
-    def initialize(event, with_weeks=(FALSE))
+    def initialize(event, with_weeks = FALSE)
       @diff = Time.diff(event, DateTime.now)
       @with_weeks = with_weeks
     end
