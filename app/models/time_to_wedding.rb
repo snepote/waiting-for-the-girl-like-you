@@ -4,16 +4,12 @@ class TimeToWedding
   end
 
   def get
-    months = time_to_event.months
-    weeks = time_to_event.weeks
-    days = time_to_event.days
-    p_m = time_percentage.months
-    p_w = time_percentage.weeks
-    p_d = time_percentage.days
+    t_value = time_to_event
+    t_per = time_percentage
     {
-      months: {percent: p_m, value: months, name: 'months'},
-      weeks: {percent: p_w, value: weeks, name: 'weeks'},
-      days: {percent: p_d, value: days, name: 'days'},
+      months: { percent: t_per.months, value: t_value.months, name: 'months' },
+      weeks: { percent: t_per.weeks, value: t_value.weeks, name: 'weeks' },
+      days: { percent: t_per.days, value: t_value.days, name: 'days' },
     }
   end
 
@@ -31,5 +27,4 @@ class TimeToWedding
   def with_weeks
     TRUE
   end
-
 end
