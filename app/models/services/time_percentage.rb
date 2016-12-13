@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   # Calculates remaing time to an event in percentage
   class TimePercentage

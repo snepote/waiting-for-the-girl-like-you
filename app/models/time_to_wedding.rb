@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Calculates time to event and returns a collection for a countdown
 class TimeToWedding
   def initialize(event_datetime: e)
