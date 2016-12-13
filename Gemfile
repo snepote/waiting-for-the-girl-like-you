@@ -18,6 +18,7 @@ gem 'turbolinks',             '~> 2.5'
 gem 'jbuilder',               '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',                   '~> 0.4', group: :doc
+gem 'time_diff',              '~> 0.3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -27,6 +28,7 @@ group :development, :test do
   gem 'sqlite3',              '~> 1.3'
   gem 'capybara',             '~> 2.7'
   gem 'selenium-webdriver',   '2.53.0'
+  gem 'timecop',              '~> 0.8.1'
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
@@ -37,10 +39,11 @@ group :development do
 end
 
 group :test do
-  gem 'codeclimate-test-reporter',  '~> 0.6.0',   require: nil
-  gem 'coveralls',                  '~> 0.8.14',  require: false
-  gem 'codecov',                    '~> 0.1.5',   require: false
-  gem 'codacy-coverage',            '~> 1.0.0',   require: false
+  gem 'codacy-coverage',      '~> 1.0.0',   require: false
+end
+
+group :test, :development do
+  gem 'rubocop',              '~> 0.42.0'
 end
 
 group :production do
