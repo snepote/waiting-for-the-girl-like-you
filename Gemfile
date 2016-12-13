@@ -39,10 +39,11 @@ group :development do
 end
 
 group :test do
-  gem 'codeclimate-test-reporter',  '~> 0.6.0',   require: nil
-  gem 'coveralls',                  '~> 0.8.14',  require: false
-  gem 'codecov',                    '~> 0.1.5',   require: false
-  gem 'codacy-coverage',            '~> 1.0.0',   require: false
+  gem 'codacy-coverage',      '~> 1.0.0',   require: false
+end
+
+group :test, :development do
+  gem 'rubocop',              '~> 0.42.0'
 end
 
 group :production do
