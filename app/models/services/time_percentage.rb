@@ -21,9 +21,10 @@ module Services
     end
 
     private
+
     attr_accessor :remaining
 
-    def p(a,b)
+    def p(a, b)
       (a.to_f / b.to_f * 100).round
     end
   end

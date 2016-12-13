@@ -1,3 +1,4 @@
+# Calculates time to event and returns a collection for a countdown
 class TimeToWedding
   def initialize(event_datetime: e)
     @event_datetime = event_datetime
@@ -9,11 +10,12 @@ class TimeToWedding
     {
       months: { percent: t_per.months, value: t_value.months, name: 'months' },
       weeks: { percent: t_per.weeks, value: t_value.weeks, name: 'weeks' },
-      days: { percent: t_per.days, value: t_value.days, name: 'days' },
+      days: { percent: t_per.days, value: t_value.days, name: 'days' }
     }
   end
 
   private
+
   attr_reader :event_datetime
 
   def time_to_event
