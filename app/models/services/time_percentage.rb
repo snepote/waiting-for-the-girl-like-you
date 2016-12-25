@@ -8,15 +8,15 @@ module Services
     end
 
     def days
-      p remaining.days, 7
+      percentage remaining.days, 7
     end
 
     def weeks
-      p remaining.weeks, 4
+      percentage remaining.weeks, 4
     end
 
     def months
-      p remaining.months, 12
+      percentage remaining.months, 12
     end
 
     def to_s
@@ -28,7 +28,7 @@ module Services
 
     attr_accessor :remaining
 
-    def p(a, b)
+    def percentage(a, b)
       (a.to_f / b.to_f * 100).round
     end
   end
