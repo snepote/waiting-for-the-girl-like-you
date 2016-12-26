@@ -23,5 +23,9 @@ module Untitled
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Custom config
+    config.x.couple_names = couple_names = 'Bob & Matze'.freeze
+    config.x.wedding_date = DateTime.parse('2017-09-02 14:00:00')
   end
 end
