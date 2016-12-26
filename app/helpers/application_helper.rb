@@ -15,6 +15,6 @@ module ApplicationHelper
   end
 
   def wedding_date
-    Rails.configuration.x.wedding_date.strftime('%A, %d.%B.%G')
+    Rails.configuration.x.wedding_date.strftime('%A, %d.%B %G')
   end
 end
