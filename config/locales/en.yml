@@ -23,3 +23,9 @@ en:
   website:
     title: Waiting for a girl like you
   Are getting married: Are getting married
+  and: and
+  date:
+    formats:
+      short: '%d/%m/%Y'
+      wedding: '%A, %d.%B %G'
+      default: '%A, %d.%B %G'

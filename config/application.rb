@@ -25,7 +25,8 @@ module Untitled
     config.active_record.raise_in_transactional_callbacks = true
 
     # Custom config
-    config.x.couple_names = 'Bob & Matze'.freeze
+    config.x.bride = 'Stefanie'.freeze
+    config.x.groom = 'Matthias'.freeze
     config.x.wedding_date = DateTime.parse('2017-09-02 14:00:00')
   end
 end

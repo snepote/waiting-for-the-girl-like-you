@@ -11,10 +11,10 @@ module ApplicationHelper
   end
 
   def couple_names
-    Rails.configuration.x.couple_names
+    "#{Rails.configuration.x.bride} #{I18n.t('and')} #{Rails.configuration.x.groom}"
   end
 
   def wedding_date
-    Rails.configuration.x.wedding_date.strftime('%A, %d.%B %G')
+    I18n.l(Rails.configuration.x.wedding_date.to_date, format: :wedding)
   end
 end
