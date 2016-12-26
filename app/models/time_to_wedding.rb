@@ -8,11 +8,18 @@ class TimeToWedding
   def get
     t_value = time_to_event
     t_per = time_percentage
-    {
-      months: { percent: t_per.months, value: t_value.months, name: 'months' },
-      weeks: { percent: t_per.weeks, value: t_value.weeks, name: 'weeks' },
-      days: { percent: t_per.days, value: t_value.days, name: 'days' }
-    }
+    hash = {}
+    %w[months weeks days].each do |time_unit|
+      value = t_value.method(:"#{time_unit}").call
+      unless value.to_i.zero?
+        hash[:"#{time_unit}"] = {
+          percent: t_per.method(:"#{time_unit}").call,
+          value: value,
+          name: (value == 1) ? ("#{time_unit}".singularize) : ("#{time_unit}")
+        }
+      end
+    end
+    hash
   end
 
   private
