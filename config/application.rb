@@ -15,12 +15,17 @@ module Untitled
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Europe/Berlin'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = ENV['DEFAULT_LOCALE'] || :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Custom config
+    config.x.couple_names = 'Bob & Matze'.freeze
+    config.x.wedding_date = DateTime.parse('2017-09-02 14:00:00')
   end
 end

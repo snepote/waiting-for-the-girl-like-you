@@ -9,4 +9,12 @@ module ApplicationHelper
       "#{page_title} | #{base_title}"
     end
   end
+
+  def couple_names
+    Rails.configuration.x.couple_names
+  end
+
+  def wedding_date
+    Rails.configuration.x.wedding_date.strftime('%A, %d.%B.%G')
+  end
 end
