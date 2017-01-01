@@ -1,6 +1,12 @@
 de:
   website:
     title: Warten auf ein Mädchen wie du
+    menu:
+      home: Home
+      wedding: Die Hochzeit
+  The wedding: Die Hochzeit
+  When: Wann
+  Where: Wo
   Are getting married: werden heiraten
   and: und
   date:
