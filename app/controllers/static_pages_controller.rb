@@ -7,6 +7,12 @@ class StaticPagesController < ApplicationController
     ).get
   end
 
+  def couple
+  end
+
+  def wedding
+  end
+
   def parallax
   end
 

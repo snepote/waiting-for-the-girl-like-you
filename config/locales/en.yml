@@ -22,6 +22,12 @@
 en:
   website:
     title: Waiting for a girl like you
+    menu:
+      home: Home
+      wedding: The wedding
+  The wedding: The wedding
+  When: When
+  Where: Where
   Are getting married: Are getting married
   and: and
   date:
