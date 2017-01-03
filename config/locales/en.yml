@@ -26,8 +26,6 @@ en:
       home: Home
       wedding: The wedding
   The wedding: The wedding
-  When: When
-  Where: Where
   Are getting married: Are getting married
   and: and
   date:
@@ -35,3 +33,13 @@ en:
       short: '%d/%m/%Y'
       wedding: '%A, %d.%B %G'
       default: '%A, %d.%B %G'
+  section:
+    couple:
+      text: "„I've been waiting for a girl like you, to come into my life …“"
+    when:
+      title: Wann
+      wedding: 'Wedding | 14h'
+      coffeecake: 'Coffee & Cake | 15h'
+      dinner: 'Dinner | 18h'
+    where:
+      title: Where

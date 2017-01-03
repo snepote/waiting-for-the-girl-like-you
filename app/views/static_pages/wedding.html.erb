@@ -1,20 +1,21 @@
 <!-- Wedding information -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="wedding">
+<div class="w3-container w3-padding-64 custom-bg-milch-blau w3-grayscale-min w3-center" id="wedding">
   <div class="w3-content">
-    <h1 class="w3-text-grey"><b><%= t('The wedding')%></b></h1>
+    <h1 class="w3-text-grey custom-text-milch-white"><b><%= t('The wedding')%></b></h1>
     <%= image_tag('wedding_location.jpg', class: 'w3-round-large w3-grayscale-min', style: 'width:100%;margin:64px 0') %>
     <div class="w3-row">
       <div class="w3-half">
-        <h2><%= t('When')%></h2>
-        <p>Wedding Ceremony - 2:00pm</p>
-        <p>Reception & Dinner - 5:00pm</p>
+        <h2><%= t('section.when.title')%></h2>
+        <p><%= t('section.when.wedding')%></p>
+        <p><%= t('section.when.coffeecake')%></p>
+        <p><%= t('section.when.dinner')%></p>
       </div>
       <div class="w3-half">
-        <h2><%= t('Where')%></h2>
-        <p>Some place, an address</p>
-        <p>Some where, some address</p>
+        <h2><%= t('section.where.title')%></h2>
+        <p>Kunsthof Barna von Sartory</p>
+        <p>Dorfstraße 24</p>
+        <p>17326 Grimme bei Brüssow</p>
       </div>
     </div>
   </div>
 </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4939.431419676584!2d14.141881682043826!3d53.42425754606577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa17f380d20683%3A0x319b687e924cc9f5!2sGrimme+24%2C+17326+Br%C3%BCssow!5e0!3m2!1ses!2sde!4v1483304520398" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
