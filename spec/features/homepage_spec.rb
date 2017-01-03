@@ -11,7 +11,7 @@ feature 'As a user I go to homepage' do
   describe 'logo', type: :feature, js: true do
     it 'shows the home text' do
       visit '/'
-      expect(page).to have_content('Home')
+      expect(page).to have_content('Hause')
     end
   end
 end
