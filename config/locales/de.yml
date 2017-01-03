@@ -2,11 +2,10 @@ de:
   website:
     title: Warten auf ein Mädchen wie du
     menu:
-      home: Home
+      home: Nach Hause
       wedding: Die Hochzeit
+      rsvp: rsvp
   The wedding: Die Hochzeit
-  When: Wann
-  Where: Wo
   Are getting married: werden heiraten
   and: und
   date:
@@ -17,3 +16,16 @@ de:
       short: '%d.%m.%Y'
       wedding: '%A, %d.%B %G'
       default: "%A, %d.%B %G"
+  section:
+    couple:
+      text: "„I've been waiting for a girl like you, to come into my life …“, heißt es im Song von Foreigner aus dem Jahr 1981. Stefanie und Matthias haben gewartet und sich 28 Jahre später gefunden. 8332,46 Kilometer entfernt – in Hanoi. Zwischen spannenden Vorträgen im Geoscience Institute der University of Hanoi, Wanderungen durch den tropischen Regenwald und Bootsfahrten auf fremden Gewässern wurden die ersten zarten Bände geknüpft und vorsichtig Blicke ausgetauscht. Bei einem Gespräch über Musik aus den Achtzigern passierte es dann – der erste Kuss. Und nun nach acht weiteren Jahren ist es soweit: SIE HEIRATEN!"
+    when:
+      title: Wann
+      wedding: 'Trauung | 14 Uhr'
+      coffeecake: 'Kaffee & Kuchen | 15 Uhr'
+      dinner: 'Abendessen | 18 Uhr'
+    where:
+      title: Wo
+    rsvp:
+      title: HOFFENTLICH HABT IHR NOCH NICHTS VOR?!
+      respond_by: Wir bitten um Rückmeldung bis zum 30. Mai 2017.

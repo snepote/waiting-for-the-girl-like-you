@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+/* Custom colors */
+$milch-blau: #8099b9;
+$milch-white: #DEE6F1;
+
+.custom-text-milch-white,.custom-text-milch-white:hover{color:$milch-white!important}
+.custom-bg-milch-blau {background-color: $milch-blau !important;}

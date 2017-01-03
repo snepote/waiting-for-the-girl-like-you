@@ -9,7 +9,13 @@
         </li>
         <li style="width:25%">
           <%= link_to(t('website.menu.wedding'), wedding_path, class: 'w3-round') %>
-        </li>        
-        <li style="width:25%"><a href="#rsvp" class="w3-margin-right w3-round w3-hover-black">RSVP</a></li>
+        </li>
+        <li style="width:25%">
+          <%= link_to(
+                t('website.menu.rsvp'),
+                rsvp_path,
+                class: 'w3-margin-right w3-round w3-hover-black'
+              ) %>
+        </li>
       </ul>
     </div>
