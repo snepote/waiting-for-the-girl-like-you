@@ -25,6 +25,7 @@ en:
     menu:
       home: Home
       wedding: The wedding
+      rsvp: rsvp
   The wedding: The wedding
   Are getting married: Are getting married
   and: and
@@ -43,3 +44,6 @@ en:
       dinner: 'Dinner | 18h'
     where:
       title: Where
+    rsvp:
+      title: HOPE YOU CAN MAKE IT!
+      respond_by: Kindly Respond By 30 May, 2017

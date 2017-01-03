@@ -13,6 +13,9 @@ class StaticPagesController < ApplicationController
   def wedding
   end
 
+  def rsvp
+  end
+
   def parallax
   end
 

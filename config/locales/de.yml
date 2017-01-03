@@ -4,6 +4,7 @@ de:
     menu:
       home: Nach Hause
       wedding: Die Hochzeit
+      rsvp: rsvp
   The wedding: Die Hochzeit
   Are getting married: werden heiraten
   and: und
@@ -25,3 +26,6 @@ de:
       dinner: 'Abendessen | 18 Uhr'
     where:
       title: Wo
+    rsvp:
+      title: HOFFENTLICH HABT IHR NOCH NICHTS VOR?!
+      respond_by: Wir bitten um Rückmeldung bis zum 30. Mai 2017.
