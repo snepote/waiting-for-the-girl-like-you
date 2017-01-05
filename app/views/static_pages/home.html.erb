@@ -6,9 +6,12 @@
     <h1 class="w3-jumbo"><%= couple_names %></h1>
     <h2><%= t 'Are getting married'%></h2>
     <h2><b><%= wedding_date %></b></h2>
+    <%= render '/components/circular_countdown', time_units: @time_to_wedding %>
   </div>
 </header>
 
-<div class="container">
-  <%= render '/components/circular_countdown', time_units: @time_to_wedding %>
-</div>
+<%= render 'couple' %>
+
+<%= render 'wedding' %>
+
+<%= render 'rsvp' %>

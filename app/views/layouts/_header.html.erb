@@ -2,18 +2,18 @@
     <div class="w3-bottom w3-hide-small">
       <ul class="w3-navbar w3-white w3-center w3-padding-8 w3-opacity-min w3-hover-opacity-off">
         <li style="width:25%">
-          <%= link_to(t('website.menu.home'), root_path, class: 'w3-margin-left w3-round') %>
+          <%= link_to(t('website.menu.home'), '#home', class: 'w3-margin-left w3-round') %>
         </li>
         <li style="width:25%">
-          <%= link_to(couple_names, couple_path, class: 'w3-round') %>
+          <%= link_to(couple_names, '#us', class: 'w3-round') %>
         </li>
         <li style="width:25%">
-          <%= link_to(t('website.menu.wedding'), wedding_path, class: 'w3-round') %>
+          <%= link_to(t('website.menu.wedding'), '#wedding', class: 'w3-round') %>
         </li>
         <li style="width:25%">
           <%= link_to(
                 t('website.menu.rsvp'),
-                rsvp_path,
+                '#rsvp',
                 class: 'w3-margin-right w3-round w3-hover-black'
               ) %>
         </li>
