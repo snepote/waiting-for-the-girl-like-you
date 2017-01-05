@@ -29,6 +29,16 @@ en:
   The wedding: The wedding
   Are getting married: Are getting married
   and: and
+  month: month
+  months: months
+  week: week
+  weeks: weeks
+  day: day
+  days: days
+  hour: hour
+  hours: hours
+  minute: minute
+  minutes: minutes
   date:
     formats:
       short: '%d/%m/%Y'

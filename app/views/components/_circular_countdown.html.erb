@@ -1,5 +1,5 @@
 <ul>
   <% time_units.each do |key, unit| %>
-  <li class="chart" data-percent="<%= unit[:percent] %>"><span><%= unit[:value] %></span> <%= unit[:name] %></li>
+  <li class="chart" data-percent="<%= unit[:percent] %>"><span><%= unit[:value] %></span> <%= t(unit[:name]) %></li>
   <% end %>
 </ul>
