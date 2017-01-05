@@ -1,5 +1,8 @@
 <ul>
   <% time_units.each do |key, unit| %>
-  <li class="chart" data-percent="<%= unit[:percent] %>"><span><%= unit[:value] %></span> <%= t(unit[:name]) %></li>
+  <li class="chart" data-percent="<%= unit[:percent] %>">
+    <%= content_tag( :span, unit[:value], class: 'countdown-unit-value') %>
+    <%= content_tag( :span, t(unit[:name]), class: 'countdown-unit-name') %>
+  </li>
   <% end %>
 </ul>
