@@ -27,6 +27,6 @@ module Untitled
     # Custom config
     config.x.bride = 'Stefanie'.freeze
     config.x.groom = 'Matthias'.freeze
-    config.x.wedding_date = DateTime.parse('2017-09-02 14:00:00')
+    config.x.wedding_date = DateTime.parse('2017-08-19 14:00:00')
   end
 end
