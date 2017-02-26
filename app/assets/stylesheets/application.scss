@@ -15,8 +15,15 @@
  */
 
 /* Custom colors */
+$glacier-white: #EBE6D9;
+$lightSky-blue: #87CEFA;
+$acadia-white: #F0EAD8;
+$milch-blau: $lightSky-blue;
+$milch-white: $glacier-white;
+/*
 $milch-blau: #8099b9;
 $milch-white: #DEE6F1;
+*/
 
 .custom-text-milch-white,.custom-text-milch-white:hover{color:$milch-white!important}
 .custom-bg-milch-blau {background-color: $milch-blau !important;}
