@@ -1,8 +1,7 @@
 <!-- Background photo -->
 <div class="w3-display-container bgimg2">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">You Are Invited</h1><br>
-    <h2>Of course..</h2>
+  <div class="w3-display-bottommiddle w3-text-white w3-center">
+    <h1 class="w3-xxlarge"><%= t('section.rsvp.section_title')%></h1><br>
   </div>
 </div>
 
@@ -11,7 +10,7 @@
   <h1><%= t('section.rsvp.title')%></h1>
   <p class="w3-large"><%= t('section.rsvp.respond_by')%></p>
   <p class="w3-xlarge">
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px"><%= t('section.rsvp.button')%></button>
   </p>
 </div>
 
@@ -20,18 +19,24 @@
   <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo" style="max-width:600px">
     <div class="w3-container w3-white w3-center">
       <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
-      <h1 class="w3-wide">CAN YOU COME?</h1>
-      <p>We really hope you can make it.</p>
+      <h1 class="w3-wide"><%= t('section.rsvp.main_question')%></h1>
       <form>
-        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+        <input class="w3-input w3-border" type="text" placeholder="<%= t('section.rsvp.person_name_placeholder')%>" name="person_name_1">
+        <input class="w3-input w3-border" type="text" placeholder="<%= t('section.rsvp.person_name_placeholder')%>" name="person_name_2">
+        <select namer="kids" class="w3-input w3-border" >
+          <option value="<%= t('section.rsvp.no_kids')%>"><%= t('section.rsvp.no_kids')%></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
       </form>
-      <p><i>Sincerely, <%= couple_names %></i></p>
+      <p><i><%= t('section.rsvp.sincerely')%></i></p>
       <div class="w3-row">
         <div class="w3-half">
-          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-green">Going</button>
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-green"><%= t('section.rsvp.going')%></button>
         </div>
         <div class="w3-half">
-          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-red">Can't come</button>
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-red"><%= t('section.rsvp.not_going')%></button>
         </div>
       </div>
     </div>

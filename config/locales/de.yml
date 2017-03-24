@@ -4,7 +4,7 @@ de:
     menu:
       home: Nach Hause
       wedding: Die Hochzeit
-      rsvp: rsvp
+      rsvp: Teilnahme
   The wedding: Die Hochzeit
   Are getting married: werden heiraten
   and: und
@@ -37,5 +37,13 @@ de:
     where:
       title: Wo?
     rsvp:
+      section_title: FEIERT IHR MIT UNS DEN GROSSEN TAG?
       title: HOFFENTLICH HABT IHR NOCH NICHTS VOR?!
+      main_question: LASST UNS WISSEN?
       respond_by: Wir bitten um Rückmeldung bis zum 30. April 2017.
+      button: TEILNAHME
+      person_name_placeholder: Vorname, Nachname
+      no_kids: ohne Kinder
+      sincerely: Euer Brautpaar
+      going: Zusage
+      not_going: Absage

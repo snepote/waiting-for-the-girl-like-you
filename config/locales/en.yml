@@ -55,5 +55,13 @@ en:
     where:
       title: Where?
     rsvp:
+      section_title: You Are Invited
       title: HOPE YOU CAN MAKE IT!
+      main_question: CAN YOU COME?
       respond_by: Kindly Respond By 30 April, 2017
+      button: RSVP
+      person_name_placeholder: Vorname, Nachname
+      no_kids: No children
+      sincerely: Sincerely
+      going: Going
+      not_going: Can't come
