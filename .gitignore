@@ -19,3 +19,5 @@
 # Coverall code coverage report folder
 coverage/
 
+# Mac files
+.DS_Store
