@@ -12,12 +12,10 @@ gem 'therubyracer', platforms: :ruby
 
 # Materialize for Rails asset pipeline
 gem 'materialize-sass'
-gem 'jquery-rails',           '~> 4.2'
+gem 'jquery-rails', '~> 4.2', '>= 4.2.2'
 gem 'turbolinks',             '~> 2.5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder',               '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc',                   '~> 0.4', group: :doc
 gem 'time_diff',              '~> 0.3.0'
 
 # Use ActiveModel has_secure_password
