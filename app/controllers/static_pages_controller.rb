@@ -6,19 +6,4 @@ class StaticPagesController < ApplicationController
       event_datetime: Rails.configuration.x.wedding_date
     ).get
   end
-
-  def couple
-  end
-
-  def wedding
-  end
-
-  def rsvp
-  end
-
-  def parallax
-  end
-
-  def about
-  end
 end
