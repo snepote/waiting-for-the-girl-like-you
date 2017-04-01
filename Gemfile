@@ -25,7 +25,7 @@ group :development, :test do
   gem 'rspec-rails',          '~> 3.5'
   gem 'sqlite3',              '~> 1.3'
   gem 'capybara',             '~> 2.13'
-  gem 'selenium-webdriver',   '~> 3.3'
+  gem 'poltergeist',          '~> 1.10'
   gem 'timecop',              '~> 0.8.1'
 end
 
