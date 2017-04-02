@@ -32,6 +32,7 @@
   <div class="field">
     <%= f.label :attends %><br>
     <%= f.check_box :attends %>
+    <%= f.radio_button :attends, { 'green': true, 'blue': false } %>
   </div>
   <div class="actions">
     <%= f.submit %>

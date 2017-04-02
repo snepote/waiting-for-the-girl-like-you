@@ -30,9 +30,12 @@ class GuestsController < ApplicationController
       if @guest.save
         format.html { redirect_to @guest, notice: 'Guest was successfully created.' }
         format.json { render :show, status: :created, location: @guest }
+        @message = 'Guest was successfully created.'
+        format.js { render 'show_update' }
       else
         format.html { render :new }
         format.json { render json: @guest.errors, status: :unprocessable_entity }
+        format.js { render 'show_update' }
       end
     end
   end
