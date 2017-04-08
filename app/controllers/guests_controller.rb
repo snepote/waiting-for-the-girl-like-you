@@ -31,11 +31,12 @@ class GuestsController < ApplicationController
         format.html { redirect_to @guest, notice: 'Guest was successfully created.' }
         format.json { render :show, status: :created, location: @guest }
         @message = 'Guest was successfully created.'
-        format.js { render 'show_update' }
+        format.js { render 'show_success' }
       else
         format.html { render :new }
         format.json { render json: @guest.errors, status: :unprocessable_entity }
-        format.js { render 'show_update' }
+        @message = 'Error, please try again'
+        format.js { render 'show_error' }
       end
     end
   end

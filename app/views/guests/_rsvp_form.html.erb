@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.text_field :name_person_one, {
-      class: 'w3-input w3-border',
-      placeholder: t('section.rsvp.person_name_placeholder')
-      } %>
+                      class: 'w3-input w3-border',
+                      placeholder: t('section.rsvp.person_name_placeholder')}
+    %>
   </div>
   <div class="field">
     <%= f.text_field :name_person_two, {
-      class: 'w3-input w3-border',
-      placeholder: t('section.rsvp.person_name_placeholder')
-      } %>
+                      class: 'w3-input w3-border',
+                      placeholder: t('section.rsvp.person_name_placeholder')}
+    %>
   </div>
   <div class="field">
     <%= f.select(:kids,
@@ -29,21 +29,21 @@
                 { :class => 'w3-input w3-border' }
     ) %>
   </div>
-  <div class="field">
-    <%= f.label :attends %><br>
-    <%= f.check_box :attends %>
-    <%= f.radio_button :attends, { 'green': true, 'blue': false } %>
+  <p><i><%= t('section.rsvp.sincerely')%></i></p>
+  <div class="w3-row">
+    <div class="w3-half">
+      <button onclick="attends(true);" type="button" class="w3-btn-block w3-green"><%= t('section.rsvp.going')%></button>
+    </div>
+    <div class="w3-half">
+      <button onclick="attends(false);" type="button" class="w3-btn-block w3-red"><%= t('section.rsvp.not_going')%></button>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <script>
+    function attends(answer) {
+      $("#guest_attends").val(answer);
+      $('#new_guest').submit();
+    }
+    // document.getElementById('id01').style.display='none'
+  </script>  
+  <%= f.hidden_field :attends %>
 <% end %>
-<p><i><%= t('section.rsvp.sincerely')%></i></p>
-<div class="w3-row">
-  <div class="w3-half">
-    <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-green"><%= t('section.rsvp.going')%></button>
-  </div>
-  <div class="w3-half">
-    <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn-block w3-red"><%= t('section.rsvp.not_going')%></button>
-  </div>
-</div>
