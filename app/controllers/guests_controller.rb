@@ -27,7 +27,8 @@ class GuestsController < ApplicationController
     @guest = Guest.new(guest_params)
     @message = String.new
     respond_to do |format|
-      if success = @guest.save
+      success = @guest.save
+      if success
         message = @guest.attends ? 'We are happy that you can make it' :
                                    'We are sorry that you are not comming'
         format.html { redirect_to @guest, notice: @message }
@@ -43,7 +44,8 @@ class GuestsController < ApplicationController
   def update
     @message = String.new
     respond_to do |format|
-      if success = @guest.update(guest_params)
+      success = @guest.update(guest_params)
+      if success
         message = 'Guest was successfully updated.'
         format.html { redirect_to @guest, notice: message }
         message = @guest.attends ? 'We are happy that you can make it' :
