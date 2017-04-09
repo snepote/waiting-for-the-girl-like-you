@@ -5,20 +5,10 @@ class StaticPagesController < ApplicationController
     @time_to_wedding = TimeToWedding.new(
       event_datetime: Rails.configuration.x.wedding_date
     ).get
+    new_guest
   end
 
-  def couple
-  end
-
-  def wedding
-  end
-
-  def rsvp
-  end
-
-  def parallax
-  end
-
-  def about
+  def new_guest
+    @guest = Guest.new
   end
 end

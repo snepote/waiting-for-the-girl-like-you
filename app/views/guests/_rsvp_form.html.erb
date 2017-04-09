@@ -1,0 +1,60 @@
+<%= form_for(@guest, { remote: true } ) do |f| %>
+  <% if @guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% @guest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :name_person_one, {
+                      class: 'w3-input w3-border',
+                      placeholder: t('section.rsvp.person_name_placeholder')}
+    %>
+  </div>
+  <div class="field">
+    <%= f.text_field :name_person_two, {
+                      class: 'w3-input w3-border',
+                      placeholder: t('section.rsvp.person_name_placeholder')}
+    %>
+  </div>
+  <div class="field">
+    <%= f.select(:kids,
+                [[t('section.rsvp.no_kids'), 0], [1, 1], [2, 2], [3, 3]], {},
+                { :class => 'w3-input w3-border' }
+    ) %>
+  </div>
+  <p id="sincerely"><i><%= t('section.rsvp.sincerely')%></i></p>
+  <div class="w3-row">
+    <div class="w3-half">
+      <button onclick="attends(true);" type="button" class="w3-btn-block w3-green"><%= t('section.rsvp.going')%></button>
+    </div>
+    <div class="w3-half">
+      <button onclick="attends(false);" type="button" class="w3-btn-block w3-red"><%= t('section.rsvp.not_going')%></button>
+    </div>
+  </div>
+  <script>
+    function attends(answer) {
+      $("#guest_attends").val(answer);
+      $(function(){
+        $('#new_guest, form.edit_guest').submit(function(){
+          $.post($(this).attr('action'), $(this).serialize(), function(json) {
+            $('#new_guest, form.edit_guest').replaceWith(json.content);
+            if (json.success) {
+              $('#sincerely').html(json.message);
+              setTimeout(function () {document.getElementById('id01').style.display = 'none';}, 4000);
+            }
+          }, 'json');
+          return false;
+        });
+      });
+      $('#new_guest, form.edit_guest').submit();
+    }
+  </script>
+  <%= f.hidden_field :attends %>
+<% end %>
