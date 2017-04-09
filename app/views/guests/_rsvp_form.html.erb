@@ -29,7 +29,7 @@
                 { :class => 'w3-input w3-border' }
     ) %>
   </div>
-  <p><i><%= t('section.rsvp.sincerely')%></i></p>
+  <p id="sincerely"><i><%= t('section.rsvp.sincerely')%></i></p>
   <div class="w3-row">
     <div class="w3-half">
       <button onclick="attends(true);" type="button" class="w3-btn-block w3-green"><%= t('section.rsvp.going')%></button>
@@ -41,9 +41,20 @@
   <script>
     function attends(answer) {
       $("#guest_attends").val(answer);
-      $('#new_guest').submit();
+      $(function(){
+        $('#new_guest, form.edit_guest').submit(function(){
+          $.post($(this).attr('action'), $(this).serialize(), function(json) {
+            $('#new_guest, form.edit_guest').replaceWith(json.content);
+            if (json.success) {
+              $('#sincerely').html(json.message);
+              setTimeout(function () {document.getElementById('id01').style.display = 'none';}, 4000);
+            }
+          }, 'json');
+          return false;
+        });
+      });
+      $('#new_guest, form.edit_guest').submit();
     }
-    // document.getElementById('id01').style.display='none'
-  </script>  
+  </script>
   <%= f.hidden_field :attends %>
 <% end %>

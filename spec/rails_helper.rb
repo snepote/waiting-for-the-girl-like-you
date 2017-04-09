@@ -20,4 +20,23 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   Capybara.javascript_driver = :poltergeist
+  Capybara.javascript_driver = :webkit
+  
+  Capybara.default_max_wait_time = 20
+  # ChromeDriver
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, browser: :chrome)
+  end
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, {debug: false})
+  end
+
+  Capybara.register_driver :iphone do |app|
+    # ChromeDriver
+    mobile_emulation = { deviceName: 'Apple iPhone 4' }
+    caps = Selenium::WebDriver::Remote::Capabilities.chrome(
+      "chromeOptions" => { "mobileEmulation" => mobile_emulation }
+    )
+    Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: caps)
+  end
 end

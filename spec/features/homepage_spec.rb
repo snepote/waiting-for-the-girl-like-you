@@ -6,4 +6,11 @@ feature 'Homepage feature' do
   #   visit '/'
   #   expect(page).to have_content('Hause')
   # end
+
+  pending 'is temporarily disabled until I can setup webkit locally'
+  # scenario 'As a user I want to see the homepage using Chrome',
+  #   type: :feature, js: true, driver: :webkit do
+  #     visit '/'
+  #     expect(page).to have_content('Hause')
+  # end
 end
