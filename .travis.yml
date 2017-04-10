@@ -2,8 +2,8 @@ language: ruby
 cache: bundler
 rvm:
   - 2.2.6
-
-bundler_args: --without production
+addons:
+  postgresql: '9.4'
 
 before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
@@ -12,6 +12,12 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.travis.yml config/database.yml
+  - bundle exec rake db:drop db:create db:test:prepare
+  - bundle exec rake db:test:load
 
 script:
   - bin/bundle exec rspec spec
