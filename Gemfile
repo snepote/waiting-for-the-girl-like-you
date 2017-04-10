@@ -27,6 +27,7 @@ group :development, :test do
   gem 'capybara',             '~> 2.13'
   gem 'poltergeist',          '~> 1.10'
   gem 'timecop',              '~> 0.8.1'
+  gem 'rubocop',              '~> 0.42.0'
 end
 
 group :development do
@@ -38,10 +39,6 @@ end
 
 group :test do
   gem 'codacy-coverage',      '~> 1.0.0',   require: false
-end
-
-group :test, :development do
-  gem 'rubocop',              '~> 0.42.0'
 end
 
 group :production do
