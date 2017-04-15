@@ -2,18 +2,41 @@
 <div class="w3-container w3-padding-64 w3-center" id="lodging">
   <div class="w3-content">
     <h1 class="w3-text-grey custom-text-milch-white"><b><%= t('Lodging')%></b></h1>
+    <%= image_tag('wedding-location-3.jpg', class: 'w3-round-large', style: 'width:100%;margin:64px 0') %>
     <div class="w3-row">
       <div class="w3-half">
-        <h2><%= t('section.when.title')%></h2>
-        <p><%= t('section.when.wedding')%></p>
-        <p><%= t('section.when.coffeecake')%></p>
-        <p><%= t('section.when.dinner')%></p>
+        <h2>
+          <%= link_to 'Bauernhof Dittrich Grimme',
+                      'http://www.bauernhof-grimme.de/', target:'_blank' %>
+        </h2>
+        <p>Dorfstraße 35 | 17321 Grimme</p>
+        <p>Tel: 039742/80074</p>
       </div>
       <div class="w3-half">
-        <h2><%= t('section.where.title')%></h2>
-        <p>Kunsthof Barna von Sartory</p>
-        <p>Dorfstraße 24</p>
-        <p>17326 Grimme bei Brüssow</p>
+        <h2>
+          <%= link_to 'Refugium Uckermark',
+                      'http://www.refugiumuckermark.de/', target:'_blank' %>
+        </h2>
+        <p>Trampe 26 | 17326 Brüssow</p>
+        <p>Tel: 039742/80419</p>
+      </div>
+    </div>
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>
+          <%= link_to 'Gästehaus Wendtshof',
+                      'http://www.gaestehaus-uckermark.de/', target:'_blank' %>
+        </h2>
+        <p>Wendtshof 6 | 17291 Carmzow-Wallmow</p>
+        <p>Tel: 039862/2145</p>
+      </div>
+      <div class="w3-half">
+        <h2>
+          <%= link_to 'Landurlaub Uckermark',
+                      'http://www.landurlaub-uckermark.de/', target:'_blank' %>
+        </h2>
+        <p>Ludwigsburg 6 | 17291 Schenkenberg</p>
+        <p>Tel: 039854/37891</p>
       </div>
     </div>
   </div>
