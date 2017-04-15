@@ -2,10 +2,11 @@ de:
   website:
     title: Warten auf ein Mädchen wie du
     menu:
-      home: Nach Hause
       wedding: Die Hochzeit
+      lodging: Unterkünfte
       rsvp: Teilnahme
   The wedding: Die Hochzeit
+  Lodging: Unterkünfte
   Are getting married: werden heiraten
   and: und
   month: Monat
@@ -47,3 +48,7 @@ de:
       sincerely: Euer Brautpaar
       going: Zusage
       not_going: Absage
+  guests:
+    'yes': 'Wir freuen uns, dass ihr dabei seid!'
+    'no': 'Schade, dass ihr nicht dabei seid!'
+    update: Guest was successfully updated

@@ -23,10 +23,11 @@ en:
   website:
     title: Waiting for a girl like you
     menu:
-      home: Home
       wedding: The wedding
+      lodging: Unterkünfte
       rsvp: rsvp
   The wedding: The wedding
+  Lodging: Lodging
   Are getting married: Are getting married
   and: and
   month: month
@@ -65,3 +66,7 @@ en:
       sincerely: Sincerely
       going: Going
       not_going: Can't come
+  guests:
+    'yes': 'We are happy that you can make it'
+    'no': 'We are sorry that you are not comming'
+    update: Guest was successfully updated
