@@ -46,7 +46,7 @@
           $.post($(this).attr('action'), $(this).serialize(), function(json) {
             $('#new_guest, form.edit_guest').replaceWith(json.content);
             if (json.success) {
-              $('#sincerely').html(json.message);
+              $('#sincerely').html(json.message).addClass('w3-pale-green');
               setTimeout(function () {document.getElementById('id01').style.display = 'none';}, 4000);
             }
           }, 'json');
