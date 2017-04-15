@@ -29,8 +29,7 @@ class GuestsController < ApplicationController
     respond_to do |format|
       success = @guest.save
       if success
-        message = @guest.attends ? 'We are happy that you can make it' :
-                                   'We are sorry that you are not comming'
+        message = @guest.attends ? I18n.t('guests.yes') : I18n.t('guests.no')
         format.html { redirect_to @guest, notice: @message }
       else
         format.html { render :new }
@@ -46,10 +45,9 @@ class GuestsController < ApplicationController
     respond_to do |format|
       success = @guest.update(guest_params)
       if success
-        message = 'Guest was successfully updated.'
+        message = I18n.t('guests.reply.update')
         format.html { redirect_to @guest, notice: message }
-        message = @guest.attends ? 'We are happy that you can make it' :
-                                   'We are sorry that you are not comming'
+        message = @guest.attends ? I18n.t('guests.yes') : I18n.t('guests.no')
       else
         format.html { render :edit }
         format.json { render json: @guest.errors, status: :unprocessable_entity }

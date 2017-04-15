@@ -2,9 +2,8 @@
 
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo"><%= couple_names %></h1>
-    <h2><%= t 'Are getting married'%></h2>
+  <div class="w3-display-bottommiddle w3-text-white w3-center">
+    <h1 class="w3-xxxlarge"><%= t 'We are getting married'%></h1>
     <h2><b><%= wedding_date %></b></h2>
     <%= render '/components/circular_countdown', time_units: @time_to_wedding %>
   </div>
@@ -13,5 +12,7 @@
 <%= render 'couple' %>
 
 <%= render 'wedding' %>
+
+<%= render 'lodging' %>
 
 <%= render 'rsvp' %>

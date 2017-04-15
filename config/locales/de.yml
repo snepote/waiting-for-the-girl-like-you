@@ -2,11 +2,12 @@ de:
   website:
     title: Warten auf ein Mädchen wie du
     menu:
-      home: Nach Hause
       wedding: Die Hochzeit
+      lodging: Unterkünfte
       rsvp: Teilnahme
   The wedding: Die Hochzeit
-  Are getting married: werden heiraten
+  Lodging: Unterkünfte
+  We are getting married: Wir werden heiraten
   and: und
   month: Monat
   months: Monate
@@ -39,11 +40,15 @@ de:
     rsvp:
       section_title: FEIERT IHR MIT UNS DEN GROSSEN TAG?
       title: HOFFENTLICH HABT IHR NOCH NICHTS VOR?!
-      main_question: LASST UNS WISSEN?
-      respond_by: Wir bitten um Rückmeldung bis zum 30. April 2017.
+      main_question: LASST UNS WISSEN OB IHR DABEI SEID
+      respond_by: Wir bitten um Rückmeldung bis zum 31. Mai 2017.
       button: TEILNAHME
       person_name_placeholder: Vorname, Nachname
       no_kids: ohne Kinder
       sincerely: Euer Brautpaar
       going: Zusage
       not_going: Absage
+  guests:
+    'yes': 'Wir freuen uns, dass ihr dabei seid!'
+    'no': 'Schade, dass ihr nicht dabei seid!'
+    update: Guest was successfully updated
