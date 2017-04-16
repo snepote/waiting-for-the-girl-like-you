@@ -1,5 +1,6 @@
 class GuestsController < ApplicationController
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate
 
   # GET /guests
   # GET /guests.json
@@ -85,4 +86,14 @@ class GuestsController < ApplicationController
        }
       }
     end
+
+    def authenticate
+      unless Mime[:json] == request.format && (%w"new create update".include? action_name) then
+        if ENV['HTTP_AUTH'] =~ %r{(.+)\:(.+)}
+          unless authenticate_with_http_basic { |user, password|  user == $1 && password == $2 }
+            request_http_basic_authentication
+          end
+        end
+      end
+    end    
 end
